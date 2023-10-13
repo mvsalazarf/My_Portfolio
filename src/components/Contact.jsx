@@ -5,6 +5,7 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 
+
 export const Contact = () => {
   const formInitialDetails = {
     firstName: '',
@@ -24,10 +25,12 @@ export const Contact = () => {
     })
   }
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:3000/contact", {
+    let response = await fetch(`${backendUrl}/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
