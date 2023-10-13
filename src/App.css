@@ -609,9 +609,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.3s ease-in-out;
 }
 
+.contact h2,
+.contact button,
+.contact a {
+  color: #fff !important;
+}
+
+.contact button a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.contact button:hover {
+  color: #121212 !important;
+}
+
+.contact button:hover::before {
+  background-color: #121212;
+}
 .contact form button span {
   z-index: 1;
   position: relative;
+}
+.contact form button a {
+  color: white;
 }
 
 .contact form button:hover {
